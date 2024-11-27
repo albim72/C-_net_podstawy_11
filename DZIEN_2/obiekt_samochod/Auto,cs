@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace obiekt_samochod
+{
+
+    public class Auto
+    {
+        public Auto() {
+            Console.WriteLine("To jest informacja z pustego konstruktora!");
+        }
+
+        public string marka;
+        public string model;
+        public double pojemnosc;
+        public int rocznik;
+
+        public Auto(string marka, string model, double pojemnosc, int rocznik)
+        {
+            this.marka = marka;
+            this.model = model;
+            this.pojemnosc = pojemnosc;
+            this.rocznik = rocznik;
+        }
+
+        double spal;
+        double cena_l;
+
+        public Auto(double spal, double cena_l)
+        {
+            //this.spal = spal;
+            //this.cena_l = cena_l;
+            Console.WriteLine($"Spalanie [l/100km]: {spal}, " +
+                $"koszt przejazdu na 100km: {spal*cena_l} zł");
+        }
+
+        public string kolorkaroserii = "czarny";
+
+        public string info(string opis)
+        {
+            return $"opis samochodu: {opis}";
+        }
+
+        public string dane()
+        {
+            return $"Marka pojazdu: {marka}, model:{model},pojemność silnika: {pojemnosc}, " +
+                $"rocznik: {rocznik}";
+        }
+
+
+    }
+}
