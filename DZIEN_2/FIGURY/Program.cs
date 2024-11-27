@@ -14,6 +14,9 @@ namespace Figury
             Console.WriteLine($"pole prostokąta: {pr.policzPole()}");
 
 
+            Trojkat tr = new Trojkat(6.5, 7.8);
+            Console.WriteLine($"pole trójkąta: {tr.policzPole()}");
+
 
             Console.ReadKey();
         }
