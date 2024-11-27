@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 
 namespace dziedziczenie
 {
-    internal class Program
+    public class Rower:Pojazd
     {
-        static void Main(string[] args)
-        {
-            Rower rw = new Rower("Trek", "Madone", "Shimano");
-            Console.WriteLine($"Przerzutka: {rw.modprz()}");
-            Console.WriteLine(rw.info());
-            Console.ReadKey();
+        string przerzutka;
 
+        public Rower(string zmarka, string zmodel, string przerzutka) : base(zmarka, zmodel)
+        {
+            this.przerzutka= przerzutka;
+        }
+
+        public string modprz() {
+            return $"model przerzutki: {przerzutka}";
         }
     }
 }
