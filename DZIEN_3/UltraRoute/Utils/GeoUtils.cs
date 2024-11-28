@@ -14,9 +14,28 @@ namespace ultraRt.Utils
             double totalDistance = 0;
             for(int i=1; i<waypoints.Count;i++)
             {
-
+                totalDistance += Haversine(
+                        waypoints[i - 1].Latitude, waypoints[i - 1].Longitude,
+                        waypoints[i].Latitude, waypoints[i].Longitude);
             }
+            return totalDistance;
         }
+
+
+        public static double CalculateTotalEalevationGain(List<Waypoint> waypoints)
+        {
+            double totalElevation = 0;
+            for (int i = 1; i < waypoints.Count; i++)
+            {
+                double elevationDiff = waypoints[i].Elevation - waypoints[i-1].Elevation;
+                if(elevationDiff > 0)
+                {
+                    totalElevation += elevationDiff;
+                }
+            }
+            return totalElevation;
+        }
+
 
         private static double Haversine(double lat1, double lon1, double lat2, double lon2)
         {
