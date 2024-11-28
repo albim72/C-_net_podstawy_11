@@ -1,0 +1,29 @@
+{
+  "Name": "Mountain Challenge",
+  "Waypoints": [
+    {
+      "Name": "Start",
+      "Latitude": 49.0,
+      "Longitude": 20.0,
+      "Elevation": 100
+    },
+    {
+      "Name": "Checkpoint 1",
+      "Latitude": 49.1,
+      "Longitude": 20.1,
+      "Elevation": 300
+    },
+    {
+      "Name": "Checkpoint 2",
+      "Latitude": 49.2,
+      "Longitude": 20.15,
+      "Elevation": 500
+    },
+    {
+      "Name": "Finish",
+      "Latitude": 49.3,
+      "Longitude": 20.2,
+      "Elevation": 200
+    }
+  ]
+}
