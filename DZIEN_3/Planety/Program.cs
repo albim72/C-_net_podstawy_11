@@ -23,8 +23,24 @@ namespace ukladsloneczny
                         new PlanetInfo(1190,1.3e22)//Pluton
             };
 
+            //waga człowieka na Ziemi (kg)
+            Console.Write("Podaj wagę człowieka [kg]: ");
+            if(!double.TryParse(Console.ReadLine(),out double weightOnEarth))
+            {
+                Console.WriteLine("Niepoprawna wartość. program zakończony!");
+                return;
+            }
 
+            //przyśpieszenie grawitacyjne na Ziemi
+            double earthGravity = planets[(int)Planet.Ziemia].Gravity;
 
+            Console.WriteLine("\nwaga człowieka na poszczególnych planetach:");
+            for(int i=0;i<planets.Length;i++)
+            {
+                double weightOnPlanet = weightOnEarth * planets[i].Gravity / earthGravity;
+                Console.WriteLine($"{(Planet)i}: {weightOnPlanet:F2}kg");
+            }
+            Console.ReadKey();
         }
     }
 }
